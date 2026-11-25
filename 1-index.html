@@ -1,0 +1,73 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sai Venkat Nulu | QA Automation Engineer</title><meta name="description" content="Senior QA Automation Engineer | SDET | GenAI testing">
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;color:#e9e4d6;font-family:Georgia,"Times New Roman",serif;
+background:radial-gradient(ellipse at 50% 0,#1c2d4d 0,#0b1424 60%,#070d18 100%)}
+.card{max-width:640px;width:100%;text-align:center;padding:40px 36px 34px;border:1px solid #c9a24a55;border-radius:6px;background:linear-gradient(#0f1b31cc,#0b1424cc);box-shadow:0 30px 80px #000a,inset 0 0 0 6px #0b1424,inset 0 0 0 7px #c9a24a33}
+.eagle{width:300px;max-width:78%;height:auto;display:block;margin:0 auto;-webkit-mask-image:radial-gradient(ellipse 62% 66% at 50% 46%,#000 62%,transparent 100%);mask-image:radial-gradient(ellipse 62% 66% at 50% 46%,#000 62%,transparent 100%);mix-blend-mode:screen;animation:glide 6s ease-in-out infinite}
+@keyframes glide{50%{transform:translateY(-6px)}}
+h1{margin:6px 0 6px;font-weight:normal;font-size:34px;letter-spacing:.14em;text-transform:uppercase}
+.rule{width:70px;height:1px;background:#c9a24a;margin:12px auto}
+.role{margin:0;color:#c9a24a;letter-spacing:.2em;font-size:13px;text-transform:uppercase}
+.tag{margin:14px 0 26px;font-style:italic;color:#e7c56a;font-size:19px}.sub{margin:-16px 0 26px;color:#aab3c4;font-size:14px}
+.row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.s{cursor:pointer;font:inherit;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#e9e4d6;background:transparent;border:1px solid #c9a24a88;padding:11px 20px;border-radius:2px;text-decoration:none;transition:.25s}
+.s:hover{background:#c9a24a;color:#0b1424;border-color:#c9a24a}
+.sheet{position:fixed;inset:0;z-index:5;display:none;align-items:center;justify-content:center;background:#050a14cc;padding:20px}.sheet.open{display:flex}
+.box{background:#0d1830;border:1px solid #c9a24a88;max-width:540px;width:100%;max-height:85vh;overflow:auto;animation:in .35s ease;border-radius:4px}
+@keyframes in{from{opacity:0;transform:translateY(14px)}}
+.hd{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;border-bottom:1px solid #c9a24a44;color:#c9a24a;letter-spacing:.2em;text-transform:uppercase;font-size:14px}
+.x{cursor:pointer;background:none;border:0;color:#c9a24a;font-size:22px;line-height:1}
+.bd{padding:18px 24px 22px;line-height:1.7;font-size:15px;color:#d6d9e0}.bd ul{padding-left:18px}.bd a{color:#e7c56a}
+.chip{display:inline-block;margin:4px 6px 4px 0;padding:3px 12px;border:1px solid #c9a24a66;font-size:13px;color:#e9e4d6}
+@media(max-width:560px){h1{font-size:25px}.card{padding:30px 18px}}
+
+.hero{position:relative;display:block}
+.flyer{position:fixed;left:0;top:0;width:240px;height:160px;z-index:20;pointer-events:none;display:none;mix-blend-mode:screen}
+.flyer img{width:100%;height:100%;object-fit:contain;display:block;animation:flap .5s ease-in-out infinite;transform-origin:50% 60%}
+@keyframes flap{50%{transform:scale(1.04,.9)}}
+.flyer.landed img{animation:none}
+.eagle.away{opacity:.15;transition:opacity .2s}
+.box{position:relative;overflow:visible}.box .in{max-height:85vh;overflow:auto}
+.sheet.pre{visibility:hidden}.sheet.pre .box,.sheet.wait .box{animation:none}
+.sheet.wait .box{opacity:0}.sheet.show .box{opacity:1;animation:in .45s ease}
+.hd{padding-top:30px}
+</style></head><body>
+<main class="card">
+<span class="hero"><img class="eagle" src="eagle-hero.jpg" alt="Eagle wearing sunglasses"></span>
+<h1>Sai Venkat Nulu</h1><div class="rule"></div><p class="role">Senior QA Automation Engineer | SDET</p>
+<p class="tag">Eagles don't ship flaky tests.</p>
+<p class="sub">Sharp eyes. Cool head. The bugs a green build hides.</p>
+<div class="row"><button class="s" data-k="about">About</button><button class="s" data-k="skills">Skills</button><button class="s" data-k="projects">Projects</button><button class="s" data-k="posts">Writing</button>
+<a class="s" href="https://www.linkedin.com/in/saivenkat9010">LinkedIn</a><a class="s" href="https://github.com/iastaknev">GitHub</a></div></main>
+<div class="flyer" id="flyer"><img id="fimg" src="eagle-fly.jpg" alt=""></div>
+<div class="sheet" id="sheet"><div class="box"><div class="hd"><span id="ti"></span><button class="x" id="x" aria-label="Close">&times;</button></div><div class="bd" id="bd"></div></div></div>
+<script>
+const chips=a=>a.map(x=>'<span class=chip>'+x+'</span>').join('');
+const C={
+about:["About","<p>I build test automation with Java and Python: web UI, REST APIs and CI pipelines. Eight-plus years in testing.</p><p>Lately my focus is testing AI systems, checking chatbot answers for grounding and hallucination. I believe a test should tell the truth.</p>"],
+skills:["Skills",chips(["Java","Python","Selenium","TestNG","REST Assured","Cucumber","Postman","Appium","Playwright","API testing","GenAI testing","LLM evaluation","RAG testing","DeepEval"])],
+projects:["Projects","<ul><li><b>Selenium + TestNG + API framework.</b> UI, REST and BDD tests with CI, built against a fictional loan application. The code is private; I am glad to walk through the design on a call.</li><li><b>Self-healing locators study.</b> A Healenium experiment on where default healing picks the wrong element, and how to correct it.</li></ul>"],
+posts:["Writing","<ul><li><a href='https://www.linkedin.com/feed/update/urn:li:activity:7529386422269620225/'>Your AI chatbot passed every test. That's the problem.</a></li><li><a href='https://www.linkedin.com/feed/update/urn:li:activity:7528705142372712449/'>The most dangerous test result isn't FAIL</a></li><li><a href='https://www.linkedin.com/feed/update/urn:li:share:7529411161021329409/'>A green build is the most dangerous thing in QA</a></li></ul>"]};
+const sh=document.getElementById('sheet'),fl=document.getElementById('flyer'),hero=document.querySelector('.eagle'),box=document.querySelector('.box');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const FW=240,FH=160;
+function heroPos(){const r=hero.getBoundingClientRect();return{x:r.left+r.width/2-FW/2,y:r.top+r.height/2-FH/2}}
+function fly(from,to,ms,cb,tilt){fl.style.display='block';fl.classList.remove('landed');
+ const mid={x:(from.x+to.x)/2,y:Math.min(from.y,to.y)-90};
+ fl.animate([{transform:`translate(${from.x}px,${from.y}px) scale(1) rotate(0deg)`},{transform:`translate(${mid.x}px,${mid.y}px) scale(1.25) rotate(${tilt}deg)`,offset:.5},{transform:`translate(${to.x}px,${to.y}px) scale(.55) rotate(0deg)`}],{duration:reduce?1:ms,easing:'cubic-bezier(.45,.05,.35,1)',fill:'forwards'});
+ setTimeout(()=>{fl.classList.add('landed');cb&&cb()},reduce?1:ms)}
+function openPage(k){const [t,h]=C[k];ti.textContent=t;bd.innerHTML=h;hero.classList.add('away');
+ sh.className='sheet open pre';const r=box.getBoundingClientRect();const to={x:r.left+r.width/2-FW/2,y:r.top-FH*0.78};
+ sh.className='sheet open wait';const from=heroPos();
+ fly(from,to,1300,()=>{sh.className='sheet open show'},-8)}
+function closePage(){if(!sh.classList.contains('show'))return;const r=box.getBoundingClientRect();const from={x:r.left+r.width/2-FW/2,y:r.top-FH*0.78};
+ sh.className='sheet open wait';sh.style.background='transparent';
+ fly(from,heroPos(),1100,()=>{fl.style.display='none';hero.classList.remove('away');sh.className='sheet';sh.style.background=''},8)}
+document.querySelectorAll('button[data-k]').forEach(b=>b.onclick=()=>{if(!sh.classList.contains('open'))openPage(b.dataset.k)});
+document.querySelectorAll('a.s').forEach(a=>a.onclick=e=>{e.preventDefault();const u=a.href;hero.classList.add('away');
+ fly(heroPos(),{x:innerWidth+80,y:-120},reduce?1:900,()=>{location.href=u},-14)});
+x.onclick=closePage;sh.onclick=e=>{if(e.target===sh)closePage()};
+addEventListener('keydown',e=>{if(e.key==='Escape')closePage()});
+</script></body></html>
